@@ -1,5 +1,5 @@
 # ARTools
-A collection of Python codes to analyze and visualize SPM data acquired on AR machines.
+A collection of Python codes to analyze and visualize SPM data acquired on AR machines, including MFP3D, Cypher, Jupier SPM.
 
 Designed for users who just want to quickly analyze and visualize SPM data in large batch with Python.
 
