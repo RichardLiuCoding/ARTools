@@ -3,7 +3,7 @@ A collection of Python codes to analyze and visualize SPM data acquired on AR ma
 
 Designed for users who just want to quickly analyze and visualize SPM data in large batch with Python.
 
-For more advanced analysis of SPM and other microscopy data, please have a look at [SciFiReaders][https://github.com/pycroscopy/SciFiReaders] project.
+For more advanced analysis of SPM and other microscopy data, please have a look at [SciFiReaders](https://github.com/pycroscopy/SciFiReaders) project.
 
 # Example uses:
 * Load and display a single ibw image:
@@ -35,7 +35,7 @@ ax[1].set_title('Amp_off')
 
 # Insllation:
 
-* Working on colab: copy this notbook ([link][https://colab.research.google.com/drive/1hvjodEQ5AKng_S1Sr_u-DvzeF41jMDZ9?usp=sharing]) to your google drive and either import your data folder using gdown or mount your drive to this notebook.
+* Working on colab: copy this notbook ([link](https://colab.research.google.com/drive/1hvjodEQ5AKng_S1Sr_u-DvzeF41jMDZ9?usp=sharing]) to your google drive and either import your data folder using gdown or mount your drive to this notebook.
 * Working locally: download the IBW_file_explorer.ipynb to where your data folder lives on your local computer and start having fun!
 
 # Functions:
