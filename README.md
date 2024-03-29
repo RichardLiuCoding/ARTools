@@ -53,21 +53,21 @@ for ix in os.listdir(folder):
                 axis.set_xlabel('Bias (V)')
 ```
 
-# Insllation:
+# Usages:
 
 * Working on colab:
   ```Python
   !pip install aespm
   import aespm.tools as at
   ```
-* Example notebook: [link](https://drive.google.com/file/d/1oQNA_NjmEttzpAH3-2YDk8XcsrdZWWW2/view?usp=sharing) to your google drive.
+* Example notebook: Copy [link](https://drive.google.com/file/d/1oQNA_NjmEttzpAH3-2YDk8XcsrdZWWW2/view?usp=sharing) to your google drive.
 * Either import your data folder using gdown or mount your drive to this notebook.
 * Working locally:
   ```Python
   !pip install aespm
   import aespm.tools as at
   ```
-and start having fun!
+  and start having fun!
 
 # Functions:
 
