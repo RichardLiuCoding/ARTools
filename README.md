@@ -30,20 +30,27 @@ t = at.display_ibw(file_name, key=['Height'], titles='Height', save='test')
 folder = 'ibw'
 fnames, ibw_data = at.display_ibw_folder(folder=folder, mode=None, key=None)
 ```
-* Load and display only "AC Mode" in a folder:
+* Load and display only "AC Mode" in a folder with different color maps:
 ```Python
 # Only the AC mode and the Height Phase and ZSensor channels will be displayed
-folder = 'ibw'
-fnames, ibw_data = at.display_ibw_folder(folder=folder, mode='AC Mode', key=['Height', 'Phase', 'ZSensor'])
+# Save the image
+at.display_ibw(file = ibw_data[-1], key=['Height', 'Phase'], titles=['Height', 'Phase'], 
+               cmaps=[plt.cm.viridis, plt.cm.Blues], save="test")
 ```
-* Load and display a single DART switching spectroscopy (hysteresis loop):
+* Load and display all the DART switching spectroscopy (hysteresis loop):
 ```Python
-t = at.load_ibw(file)
-fig, ax=plt.subplots(1,2,figsize=[9,4])
-ax[0].plot(t.bias, t.phase1_off)
-ax[0].set_title('Phase1_off')
-ax[1].plot(t.bias, t.amp_off)
-ax[1].set_title('Amp_off')
+folder = 'ibw'
+for ix in os.listdir(folder):
+    if ix.endswith('.ibw'):
+        t = at.load_ibw(file=os.path.join(folder, ix))
+        if t.mode == 'Spec':
+            fig, ax=plt.subplots(1, 2, figsize=[9,4])
+            ax[0].plot(t.bias, t.amp_off, '.-')
+            ax[1].plot(t.bias, t.phase1_off, '.-')    
+            ax[0].set_title('Piezo response (a.u.)')
+            ax[1].set_title('Phase 1')
+            for axis in ax:
+                axis.set_xlabel('Bias (V)')
 ```
 
 # Insllation:
