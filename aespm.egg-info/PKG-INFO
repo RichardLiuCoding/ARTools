@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: aespm
+Version: 0.0.2
+Summary: Asylum Research SPM data analysis packages
+Home-page: https://github.com/RichardLiuCoding/ARTools
+Download-URL: https://github.com/RichardLiuCoding/ARTools.git
+Author: Richard (Yu) Liu
+Author-email: yliu206@utk.edu
+License: MIT
+Keywords: SPM,AR,Python,Data Analysis
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: igor2

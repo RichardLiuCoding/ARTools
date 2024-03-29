@@ -2,12 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
   name = 'aespm',
-  version = '1.0.0',
+  version = '0.0.2',
   packages = find_packages(),
-  package_data = {
-    "":["*.txt", "*.mat"]
-    },
-  include_package_data=True,
   license='MIT',
   description = 'Asylum Research SPM data analysis packages',
   author = 'Richard (Yu) Liu',
