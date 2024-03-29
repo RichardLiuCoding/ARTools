@@ -60,6 +60,7 @@ class IBWData(object):
         # Spectroscopy files:
         if "ARDoIVCurve" in self.header:
             self.mode = "Spec"
+            self._load_ss()
         # Image files:
         else:
             self.size = self.header['ScanSize']
@@ -168,8 +169,8 @@ class IBWData(object):
         self.phase1_off = phase1_off[1:]
         self.phase2_on = phase2_on[1:]
         self.phase2_off = phase2_off[1:]
-        self.amp_on = amp_on[1:] * np.cos(phase2_off/180*np.pi)
-        self.amp_off = amp_off[1:] * np.cos(phase1_off/180*np.pi)
+        self.amp_on = amp_on[1:] * np.cos(phase2_off[1:]/180*np.pi)
+        self.amp_off = amp_off[1:] * np.cos(phase1_off[1:]/180*np.pi)
 
         # return bias[1:], amp_off[1:], phase1_off[1:], phase2_off[1:]
 
